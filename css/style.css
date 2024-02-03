@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    transition: all .7s ease-in-out
+}
+
+.main-color {
+    color: #009688
+}
+
+.main-border-color {
+    border: 1px solid #009688
+}
+
+#showAddList {
+    font-size: 24px;
+    height: 30px;
+    font-weight: bolder;
+    color: white;
+    width: 30px;
+    line-height: 28px;
+    position: fixed;
+    top: 5px;
+    left: 0;
+    z-index: 999;
+    cursor: pointer
+}
+
+.displayed {
+    left: 0 !important
+}
+
+.slide {
+    left: 200px !important
+}
+
+.main-bg-color {
+    background: #009688
+}
+
+#citys {
+    width: 200px;
+    overflow-y: scroll;
+    border: 1px solid #e8e8e8;
+    text-align: left;
+    position: fixed;
+    top: 40px;
+    right: 5px;
+    max-height: 0;
+}
+
+#citys span:hover {
+    text-indent: -20%
+}
+
+#addCity {
+    font-weight: bold;
+    font-size: 15px;
+    position: fixed;
+    top: 0px;
+    left: -200px;
+    z-index: 100;
+    width: 200px;
+    overflow: hidden;
+}
+
+#addCity input {
+    height: 30px;
+    direction: ltr;
+}
+
+#addCity input:first-of-type {
+    font-weight: bold
+}
+
+.main-bb-color {
+    border-bottom: 1px solid #009688;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    color: white;
+    opacity: .7;
+    font-size: 21px;
+    height: 40px !important;
+    line-height: 30px
+}
+
+input[type="submit"]:hover {
+    opacity: 1
+}
+
+.showed {
+    max-height: 500px !important;
+}
+
+#citys i {
+    width: 20%;
+    float: right;
+    padding: 5px;
+    color: white;
+    font-style: normal;
+    border-bottom: 1px solid white;
+}
+
+#citys span {
+    width: 80%;
+    float: right;
+    padding: 5px;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.app {
+    width: 500px;
+    margin: 5vh auto;
+    box-shadow: 0px 0px 8px 2px #dadada;
+    overflow: hidden;
+    background: white;
+}
+
+h4 {
+    padding: 10px;
+    color: white;
+    width: 15%;
+    float: left;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+td {
+    direction: ltr;
+    padding: 5px;
+}
+
+h1 {
+    padding: 20px
+}
+
+table:first-of-type {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table:first-of-type td {
+    border: 1px solid #e6e4e4;
+    width: calc(100%/6);
+}
+
+h3 {
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    background: #ececec;
+}
+
+input {
+    width: calc(100%);
+    text-align: center;
+    outline: none;
+    border: none;
+    line-height: 100%;
+    font-size: 15px;
+    height: 25px;
+}
+
+button {
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #fff;
+    background: #3a97b1;
+}
+
+.resultat h2 {
+    padding: 10px;
+    background: #dcdcdc;
+}
+
+.resultat table {
+    background: #fdfdfd;
+    font-size: 18px;
+    border-collapse: collapse
+}
+
+.resultat table td {
+    border: 1px solid #e6e4e4;
+    width: calc(100%/4);
+}
+
+.position,
+.qibla {
+    width: 100%;
+    float: left;
+}
+
+.day {
+    background: url('../img/day.png') center center no-repeat;
+    background-size: 100% 100%
+}
+
+.night {
+    background: url('../img/night.png') center center no-repeat;
+    background-size: 100% 100%
+}
+
+#clock {
+    background: linear-gradient(90deg, rgba(60, 185, 175, 1) 4%, rgba(60, 185, 175, .2) 98%);
+    padding: 10px;
+    direction: ltr;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    width: 85%
+}
+
+#clock span {
+    width: 30%;
+    margin-left: 5%
+}
+
+#show {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    background: #e0e0e0;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#cityName,
+#id {
+    font-weight: bold
+}
+
+#changeTheme {
+    cursor: pointer;
+    height: 50px;
+    position: relative;
+    border: none;
+    outline: none
+}
+
+#changeTheme:after {
+    content: "تغيير النمط";
+    position: absolute;
+    color: white;
+    top: 16px;
+    right: 0;
+    left: 0;
+    display: block;
+    font-size: 22px;
+}
+
+#footer {
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    width: 100%;
+}
+
+@media screen and (max-width : 500px) {
+    .em {
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,132 @@
+<html>
+    
+    <head>
+        
+        <meta charset='UTF-8'>
+        <title>برنامج تحديد القبلة</title>
+        <link rel='stylesheet' href='css/style.css'>
+        
+    </head>
+    
+    <body style='direction: rtl'>
+        <i id="showAddList" class="main-bg-color" title="إظهار" >&#43;</i>
+        <div id="show">إظهار لائحة المدن</div>
+        <div id="citys"></div>
+        <div id="addCity" class="main-border-color">
+            <h3>إضافة مدينة</h3>
+            <input type="text" placeholder="إسم المدينة" class="main-bb-color">
+            <input type="number" placeholder="درج الطول" class="main-bb-color">
+            <input type="number" placeholder="دقائق الطول" class="main-bb-color">
+            <input type="number" placeholder="درج العرض" class="main-bb-color">
+            <input type="number" placeholder="دقائق العرض" class="main-bb-color">
+            <input type="number" placeholder="الإرتفاع" class="main-bb-color">
+            <input type="number" placeholder="Long" class="main-bb-color">
+            <input type="number" placeholder="Lat" class="main-bb-color">
+            <input type="number" placeholder="K" class="main-bb-color">
+            <input type="number" placeholder="L" class="main-bb-color">
+            <input type="number" placeholder="M" class="main-bb-color">
+            <input type="number" placeholder="N" class="main-bb-color">
+            <input type="number" placeholder="O" class="main-bb-color">
+            <input type="number" placeholder="P" class="main-bb-color">
+            <input type="number" placeholder="Q" class="main-bb-color">
+            <input type="number" placeholder="R" class="main-bb-color">
+            <input type="number" placeholder="S" class="main-bb-color">
+            <input type="number" placeholder="T" class="main-bb-color">
+            <input type="number" placeholder="U" class="main-bb-color">
+            <input type="number" placeholder="V" class="main-bb-color">
+            <input type="number" placeholder="W" class="main-bb-color">
+            <input type="submit" value="إضافة" id="addCitySub" class="main-bg-color">
+        </div>
+        <div class="app">
+            <h1 class="main-color">برنامج تحديد إتجاه القبلة</h1>
+            <div id="clock">18:47:30</div>
+        <h4 id="updateBtn" class="main-bg-color">مزامنة</h4>
+            <table>
+                <tr>
+                    <td><h3>الرقم</h3></td>
+                    <td><h3>السنة</h3></td>
+                    <td><h3>الشهر</h3></td>
+                    <td><h3>اليوم</h3></td>
+                    <td><h3>الساعة</h3></td>
+                    <td><h3>الدقيقة</h3></td>
+                </tr>
+                <tr>
+                    <td><input type='number' id='number' max='156' min='0'   placeholder='الرقم' value='1'></td>
+                    <td><input type='number' id='year'   min='0'   max=3000  placeholder='السنة' value='2012'></td>
+                    <td><input type='number' id='month'  min='1'   max=12    placeholder='الشهر' value='5'></td>
+                    <td><input type='number' id='day'    min='1'   max=31    placeholder='اليوم' value='26'></td>
+                    <td><input type='number' id='hour'   min='0'   max=23    placeholder='الساعة' value='9'></td>
+                    <td><input type='number' id='minute' min='0'   max=59    placeholder='الدقيقة' value='17'></td>
+                </tr>
+            </table>
+            <button class="main-bg-color">حساب</button>
+        <div class='resultat'>
+            <div class='qibla'>
+                <h2>النتيجة</h2>
+                <table>
+                    <tr>
+                        <td class="main-bg-color"></td>
+                        <td>درجة</td>
+                        <td>دقائق</td>
+                        <td class="main-bg-color"></td>
+                    </tr>
+                    <tr>
+                        <td>سمت القبلة</td>
+                        <td id='id1'>--</td>
+                        <td id='id2'>--</td>
+                        <td>من الشمال</td>
+                    </tr>
+                    <tr>
+                        <td>سمت الشمس</td>
+                        <td id='id3'>--</td>
+                        <td id='id4'>--</td>
+                        <td id='id7'>--</td>
+                    </tr>
+                    <tr>
+                        <td>الفرق</td>
+                        <td id='id5'>--</td>
+                        <td id='id6'>--</td>
+                        <td class="main-bg-color"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class='position'>
+                <h2>الموقع</h2>
+                <table>
+                    <tr>
+                        <td>الرقم</td>
+                        <td id='id'>---</td>
+                        <td>الإسم</td>
+                        <td id='cityName'>---</td>
+                    </tr>
+                    <tr>
+                        <td class="main-bg-color"></td>
+                        <td>درجة</td>
+                        <td>دقائق</td>
+                        <td class="main-bg-color"></td>
+                    </tr>
+                    <tr>
+                        <td>الطول</td>
+                        <td id='heightDeg'>---</td>
+                        <td id='heightMin'>---</td>
+                        <td>شرقا</td>
+                    </tr>
+                    <tr>
+                        <td>العرض</td>
+                        <td id='widthDeg'>---</td>
+                        <td id='widthMin'>---</td>
+                        <td>شمالا</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+            <input type="color" id="changeTheme">
+            <div id="footer" class="main-bg-color">جميع الحقوق محفوظة &copy; 2024</div>
+    </div>
+        <script src='js/jquery.min.js'></script>
+        <script src='js/convertHexToRgb.js'></script>
+        <script src='js/vars.js'></script>
+        <script src='js/code.js'></script>
+    </body>
+    
+</html>
